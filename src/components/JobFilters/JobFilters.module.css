@@ -1,0 +1,49 @@
+.job__filters {
+  background-color: #FFF;
+  box-shadow: 0 16px 24px hsla(180, 29%, 50%, .2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  margin-bottom: 48px;
+  padding: 20px 40px;
+  width: 100%;
+}
+
+.job__filters__hidden {
+  visibility: hidden;
+}
+
+.job__filterList {
+  display: flex;
+  font-size: 14px;
+  height: 100%;
+  list-style: none;
+}
+
+.job__filterItem {
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+  color: var(--primary);
+  font-weight: 700;
+  display: flex;
+  height: 100%;
+}
+
+.job__filterItem + .job__filterItem {
+  margin-left: 16px;
+}
+
+.job__filterClear {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+  text-decoration: underline;
+}
+
+.job__filterClear:hover {
+  color: var(--very-dark-cyan)
+}

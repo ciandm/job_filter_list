@@ -1,0 +1,24 @@
+.job__filterRemove {
+  background: url('../../assets//icon-remove.svg'),
+  var(--primary);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  height: 100%;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.job__filterRemove:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+.job__filterTag {
+  background-color: var(--light-cyan);
+  border-radius: 4px 0 0 4px;
+  padding: 8px;
+}

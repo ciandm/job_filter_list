@@ -1,0 +1,135 @@
+.filterCard {
+  align-items: center;
+  background-color: #FFF;
+  border-left: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 16px 24px hsla(180, 29%, 50%, .2);
+  color: var(--primary);
+  display: flex;
+  margin-top: 24px;
+  padding: 32px;
+}
+
+.filterCard__image {
+  background-color: var(--light-cyan);
+  border-radius: 50%;
+  height: 88px;
+  flex-shrink: 0;
+  margin-right: 24px;
+  width: 88px;
+}
+
+.filterCard__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterCard__company {
+  align-items: center;
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.filterCard__companyName {
+  color: var(--primary);
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.filterCard__featured {
+  display: flex;
+}
+
+.filterCard__badge,
+.filterCard__badge__secondary {
+  border-radius: 50px;
+  color: #FFF;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.filterCard__badge {
+  background-color: var(--primary);
+}
+
+.filterCard__badge__secondary {
+  background-color: var(--very-dark-cyan);
+  margin-left: 8px;
+}
+
+.filterCard__role {
+  color: var(--very-dark-cyan);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.filterCard__roleDetails {
+  color: var(--dark-cyan);
+  font-weight: 500;
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+}
+
+.filterCard__roleDetail {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.filterCard__roleDetail:not(:last-child) {
+  padding-right: 16px;
+}
+
+.filterCard__roleDetail:not(:first-child) {
+  padding-left: 16px;
+}
+
+.filterCard__roleDetail:first-child::after {
+  background-color: var(--dark-cyan);
+  border-radius: 4px;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  right: 0;
+}
+
+.filterCard__roleDetail:nth-child(2)::after {
+  background-color: var(--dark-cyan);
+  border-radius: 4px;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  right: 0;
+}
+
+.filterCard__tags {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.filterCard__tag + .filterCard__tag {
+  margin-left: 16px;
+}
+
+.filterCard__tag {
+  background-color: var(--light-cyan);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.filterCard__tag:hover {
+  background-color: var(--primary);
+  color: #FFF;
+}
