@@ -53,6 +53,49 @@ function App() {
     }
   }
 
+  function handleFilterRemove(type, filter) {
+    if (type === 'role') {
+      setFilters(prevFilters => ({
+        ...prevFilters,
+        role: ''
+      }))
+    }
+
+    if (type === 'level') {
+      setFilters(prevFilters => ({
+        ...prevFilters,
+        level: ''
+      }))
+    }
+
+    if (type === 'languages') {
+      let newLanguages = [...filters.languages]
+      newLanguages = newLanguages.filter(lang => lang !== filter)
+      setFilters(prevFilters => ({
+        ...prevFilters,
+        languages: newLanguages
+      }))
+    }
+
+    if (type === 'tools') {
+      let newTools = [...filters.tools]
+      newTools = newTools.filter(tool => tool !== filter);
+      setFilters(prevFilters => ({
+        ...prevFilters,
+        tools: newTools
+      }))
+    }
+  }
+
+  function handleClearAllFilters() {
+    setFilters({
+      role: '',
+      level: '',
+      languages: [],
+      tools: []
+    })
+  }
+
   function checkIfIsFiltered(obj) {
 
     let isFiltered = false;
@@ -94,7 +137,9 @@ function App() {
       <Header />
       <FilterContext.Provider value={{
         filters,
-        handleFilterSelect: handleFilterSelect
+        handleFilterSelect: handleFilterSelect,
+        handleFilterRemove: handleFilterRemove,
+        handleClearAllFilters: handleClearAllFilters
       }}>
         <JobsContainer>
           <JobFilters activeFilters={activeFilters} />

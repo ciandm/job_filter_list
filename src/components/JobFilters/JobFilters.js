@@ -5,7 +5,7 @@ import Filter from '../Filter/Filter';
 
 function JobFilters({ activeFilters }) {
 
-  const { filters } = useContext(FilterContext)
+  const { filters, handleClearAllFilters } = useContext(FilterContext)
   return (
     <div className={`${styles.job__filters} ${activeFilters ? '' : styles.job__filters__hidden}`}>
       <ul className={styles.job__filterList}>
@@ -16,7 +16,10 @@ function JobFilters({ activeFilters }) {
             <li
               key={index}
               className={styles.job__filterItem}>
-              <Filter filterLabel={roleFilter} />
+              <Filter
+                filterLabel={roleFilter}
+                type="role"
+              />
             </li>
           ))
         }
@@ -27,7 +30,9 @@ function JobFilters({ activeFilters }) {
             <li
               key={index}
               className={styles.job__filterItem}>
-              <Filter filterLabel={levelFilter} />
+              <Filter
+                filterLabel={levelFilter}
+                type="level" />
             </li>
           ))
         }
@@ -38,7 +43,9 @@ function JobFilters({ activeFilters }) {
             <li
               key={index}
               className={styles.job__filterItem}>
-              <Filter filterLabel={languagesFilter} />
+              <Filter
+                filterLabel={languagesFilter}
+                type="languages" />
             </li>
           ))
         }
@@ -49,12 +56,17 @@ function JobFilters({ activeFilters }) {
             <li
               key={index}
               className={styles.job__filterItem}>
-              <Filter filterLabel={toolsFilter} />
+              <Filter
+                filterLabel={toolsFilter}
+                type="tools" />
             </li>
           ))
         }
       </ul>
-      <button className={styles.job__filterClear}>Clear</button>
+      <button
+        className={styles.job__filterClear}
+        onClick={() => handleClearAllFilters()}
+      >Clear</button>
     </div>
   )
 }
