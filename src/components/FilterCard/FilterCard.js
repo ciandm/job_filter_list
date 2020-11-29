@@ -19,10 +19,10 @@ function FilterCard({
   tools
 }) {
 
-  const { filters, handleFilterSelect } = useContext(FilterContext)
+  const { handleFilterSelect } = useContext(FilterContext)
 
   return (
-    <div className={styles.filterCard}>
+    <div className={`${styles.filterCard} ${featured ? styles.filterCard__alt : ''}`}>
       <div className={styles.filterCard__image}>
         <img src={require(`../../assets/company_logo/${logo}`).default} alt={company} />
       </div>

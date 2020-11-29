@@ -1,13 +1,24 @@
 .filterCard {
   align-items: center;
   background-color: #FFF;
-  border-left: 4px solid transparent;
   border-radius: 8px;
   box-shadow: 0 16px 24px hsla(180, 29%, 50%, .2);
   color: var(--primary);
   display: flex;
   margin-top: 24px;
+  overflow: hidden;
   padding: 32px;
+  position: relative;
+}
+
+.filterCard__alt::before {
+  background-color: var(--primary);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 5px;
 }
 
 .filterCard__image {
