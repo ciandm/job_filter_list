@@ -20,5 +20,6 @@
 .job__filterTag {
   background-color: var(--light-cyan);
   border-radius: 4px 0 0 4px;
+  height: 100%;
   padding: 8px;
 }

@@ -16,6 +16,7 @@
 
 .job__filterList {
   display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   height: 100%;
   list-style: none;
@@ -46,4 +47,21 @@
 
 .job__filterClear:hover {
   color: var(--very-dark-cyan)
+}
+
+@media screen and (max-width: 375px) {
+
+  .job__filterList {
+    gap: 16px;
+    margin-right: 20px;
+  }
+
+  .job__filters {
+    height: auto;
+    padding: 20px;
+  }
+
+  .job__filterItem + .job__filterItem {
+    margin: 0;
+  }
 }

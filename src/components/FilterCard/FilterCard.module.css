@@ -5,6 +5,7 @@
   box-shadow: 0 16px 24px hsla(180, 29%, 50%, .2);
   color: var(--primary);
   display: flex;
+  flex-wrap: wrap;
   margin-top: 24px;
   overflow: hidden;
   padding: 32px;
@@ -29,6 +30,11 @@
   margin-right: 24px;
   width: 88px;
 }
+
+.filterCard__image img {
+  height: 100%;
+  width: 100%;
+  }
 
 .filterCard__details {
   display: flex;
@@ -107,7 +113,7 @@
   position: absolute;
   height: 4px;
   width: 4px;
-  right: 0;
+  right: -2px;
 }
 
 .filterCard__roleDetail:nth-child(2)::after {
@@ -118,7 +124,7 @@
   position: absolute;
   height: 4px;
   width: 4px;
-  right: 0;
+  right: -2px;
 }
 
 .filterCard__tags {
@@ -143,4 +149,57 @@
 .filterCard__tag:hover {
   background-color: var(--primary);
   color: #FFF;
+}
+
+@media screen and (max-width: 375px) {
+
+  .filterCard {
+    margin-top: 40px;
+    overflow: initial;
+    position: relative;
+  }
+
+  .filterCard__image {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: -24px;
+  }
+
+  .filterCard__details {
+    border-bottom: 1px solid var(--light-cyan);
+    margin-bottom: 12px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .filterCard__role {
+    font-size: 15px;
+  }
+
+  .filterCard__roleDetails {
+    font-size: 13px;
+  }
+
+  .filterCard__roleDetail:not(:last-child) {
+  padding-right: 8px;
+}
+
+.filterCard__roleDetail:not(:first-child) {
+  padding-left: 8px;
+}
+
+.filterCard__tags {
+  flex-wrap: wrap;
+  margin-left: -8px;
+  width: 100%;
+}
+
+.filterCard__tag {
+  margin: 8px;
+}
+
+.filterCard__tag + .filterCard__tag {
+  margin-left: 8px;
+}
 }
